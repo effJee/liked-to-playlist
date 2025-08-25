@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+{% if not logged_in %}
+<h2>Turn your Liked Songs into a Playlist</h2>
+<a class="button" href="/login">Login with Spotify</a>
+{% else %}
+<h2>Create your Playlist</h2>
+<form action="/create-playlist" method="post">
+<input type="text" name="name" placeholder="Playlist name (optional)">
+<button type="submit">Create Playlist</button>
+</form>
+<p><a href="/logout" style="color:#bbb; font-size:.85rem;">Logout</a></p>
+{% endif %}
+{% endblock %}

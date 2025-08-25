@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+{% if playlist_url %}
+<h2>✅ Playlist Created!</h2>
+<p>{{ count }} songs added.</p>
+<a href="{{ playlist_url }}" target="_blank" class="button">Open Playlist</a>
+{% else %}
+<h2>⚠️ No liked songs found.</h2>
+<p>You don’t have any saved tracks in your library.</p>
+{% endif %}
+<a href="/" class="button" style="background:#333;margin-top:1rem;">Back</a>
+{% endblock %}
